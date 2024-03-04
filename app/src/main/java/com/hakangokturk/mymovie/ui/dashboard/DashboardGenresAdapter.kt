@@ -32,6 +32,7 @@ class DashboardGenreListAdapter(private var genreList: List<GenreList.Genre?>): 
         val genre = genreList[position]
         holder.dataBinding.item = genre
 
+
         holder.dataBinding.root.setOnClickListener {
             val bundle = bundleOf()
             clickListener?.click("movieByGenre", MovieByGenre(genre?.id!!, genre.name!!))
