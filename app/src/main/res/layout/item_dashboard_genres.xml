@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="com.hakangokturk.mymovie.model.GenreList.Genre" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/blacktoolight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@{item.name}"
+            android:textSize="17sp"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

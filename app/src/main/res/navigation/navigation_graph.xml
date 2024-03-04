@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.hakangokturk.mymovie.ui.welcome.WelcomeFragment"
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_signinFragment"
+            app:destination="@id/signinFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signinFragment"
+        android:name="com.hakangokturk.mymovie.ui.user.SigninFragment"
+        android:label="SigninFragment" >
+        <action
+            android:id="@+id/action_signinFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.hakangokturk.mymovie.ui.user.SignupFragment"
+        android:label="SignupFragment" >
+        <action
+            android:id="@+id/action_signupFragment_to_signinFragment"
+            app:destination="@id/signinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.hakangokturk.mymovie.ui.dashboard.DashboardFragment"
+        android:label="DashboardFragment" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_nowPlayingFragment"
+            app:destination="@id/nowPlayingFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_genreListFragment"
+            app:destination="@id/genreListFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_nowPlayingFragment2"
+            app:destination="@id/nowPlayingFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_upcomingFragment"
+            app:destination="@id/upcomingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nowPlayingFragment"
+        android:name="com.hakangokturk.mymovie.ui.nowplaying.NowPlayingFragment"
+        android:label="fragment_now_playing"
+        tools:layout="@layout/fragment_now_playing" >
+        <action
+            android:id="@+id/action_nowPlayingFragment_to_detailChildFragment"
+            app:destination="@id/detailChildFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genreListFragment"
+        android:name="com.hakangokturk.mymovie.ui.genrelist.GenreListFragment"
+        android:label="fragment_genre_list"
+        tools:layout="@layout/fragment_genre_list" >
+        <action
+            android:id="@+id/action_genreListFragment_to_detailChildFragment"
+            app:destination="@id/detailChildFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailChildFragment"
+        android:name="com.hakangokturk.mymovie.ui.detailchild.DetailChildFragment"
+        android:label="DetailChildFragment" />
+    <fragment
+        android:id="@+id/upcomingFragment"
+        android:name="com.hakangokturk.mymovie.ui.upcoming.UpcomingFragment"
+        android:label="UpcomingFragment" >
+        <action
+            android:id="@+id/action_upcomingFragment_to_detailChildFragment"
+            app:destination="@id/detailChildFragment" />
+    </fragment>
+</navigation>

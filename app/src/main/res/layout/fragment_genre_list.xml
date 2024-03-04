@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="genre"
+            type="com.hakangokturk.mymovie.ui.dashboard.MovieByGenre" />
+    </data>
+
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.genrelist.GenreListFragment"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{genre.name}"
+        android:fontFamily="@font/comic"
+        android:textColor="@color/lightgreen"
+        android:textSize="30sp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/genreListRecyclerId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:scrollbarThumbVertical="@color/lightgreen"
+                android:scrollbarStyle="outsideInset"
+                android:scrollbarSize="5dp"/>
+
+    </GridLayout>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
