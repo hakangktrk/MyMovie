@@ -32,6 +32,4 @@ class DashboardNowPlayingAdapter(private var nowPlayingResultList: List<NowPlayi
             Navigation.findNavController(it).navigate(R.id.action_dashboardFragment_to_nowPlayingFragment)
         }
     }
-
-
 }

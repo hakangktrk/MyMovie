@@ -6,7 +6,6 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.hakangokturk.mymovie.database.entity.User
 
-
 @Dao
 interface UserDao {
 

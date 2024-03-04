@@ -16,7 +16,6 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-//@Module ile bu sinifin module oldugunu tanittim. Burdan nesneler donecek.
 class RetrofitModule {
 
     private val timeout = 20L
@@ -25,8 +24,6 @@ class RetrofitModule {
     @Provides
     fun provideGsonConverterFactory(): GsonConverterFactory {
         return GsonConverterFactory.create()
-        //Gson converterlar yada parse lar costume yapilabilir. o yuzden ayri fonksiyon olarak yaziyoruz
-    //@Singleton:Bir kere kullanilsin maliyet yapmasin diye 1 tane olusturuyoruz.
     }
 
     @Singleton
@@ -40,8 +37,6 @@ class RetrofitModule {
             .client(okHttpClient)
             .addConverterFactory(gsonConverterFactory)
             .build()
-
-        //ConverterFactory: Bana cevaplar gson geliyor hep, gelen gsonlari kotline cevir dedik
     }
 
     @Singleton
@@ -80,6 +75,5 @@ class RetrofitModule {
             httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         } else httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.NONE
         return httpLoggingInterceptor
-        //http istekleri logluyoruz detayli bunu da http kullanarak(costum Okhttp kullanmis olduk) ve interceptor koyarak yapiyoruz
     }
 }

@@ -4,7 +4,7 @@
 
     <data>
         <variable
-            name="item"
+            name="genres"
             type="com.hakangokturk.mymovie.model.GenreList.Genre" />
     </data>
     <com.google.android.material.card.MaterialCardView
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@{item.name}"
+            android:text="@{genres.name}"
             android:textSize="17sp"
             android:textColor="@color/white" />
 

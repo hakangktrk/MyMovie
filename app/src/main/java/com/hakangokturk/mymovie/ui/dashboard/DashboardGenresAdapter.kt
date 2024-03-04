@@ -12,9 +12,6 @@ import com.hakangokturk.mymovie.model.GenreList
 import kotlinx.parcelize.Parcelize
 
 class DashboardGenreListAdapter(private var genreList: List<GenreList.Genre?>): RecyclerView.Adapter<DashboardGenreListAdapter.DashboardGenresHolder> () {
-
-    //var clickListener: ClickListener? = null
-
     class DashboardGenresHolder(var dataBinding: ItemDashboardGenresBinding): RecyclerView.ViewHolder(dataBinding.root) {
 
     }
@@ -30,22 +27,15 @@ class DashboardGenreListAdapter(private var genreList: List<GenreList.Genre?>): 
 
     override fun onBindViewHolder(holder: DashboardGenresHolder, position: Int) {
         val genre = genreList[position]
-        holder.dataBinding.item = genre
+        holder.dataBinding.genres = genre
 
         holder.dataBinding.root.setOnClickListener {
             val bundle = bundleOf()
-            //clickListener?.click("movieByGenre", MovieByGenre(genre?.id!!, genre.name!!))
             bundle.putParcelable("movieByGenre", MovieByGenre(genre?.id!!, genre.name!!))
             Navigation.findNavController(it).navigate(R.id.action_dashboardFragment_to_genreListFragment, bundle)
         }
     }
 }
-/*
-interface ClickListener {
-    fun click(name: String, obj: Parcelable)
-}
-
- */
 
 @Parcelize
 data class MovieByGenre (

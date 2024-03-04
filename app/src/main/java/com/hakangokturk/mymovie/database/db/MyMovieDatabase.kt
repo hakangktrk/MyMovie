@@ -10,6 +10,5 @@ import com.hakangokturk.mymovie.database.entity.User
     entities = [User::class]
 )
 abstract class MyMovieDatabase : RoomDatabase(){
-    //roomdatabase den extend ettik. butun ozelliklerini eklememek icin abstract yaptik
     abstract fun userDao(): UserDao
 }

@@ -41,7 +41,6 @@ class SigninFragment : BaseFragment<FragmentSigninBinding> (
             if(isUserExist) {
                 launch (Dispatchers.Main){
                     try {
-                        //Toast.makeText(requireContext(), "Successful sign in", Toast.LENGTH_SHORT).show()
                         findNavController().navigate(R.id.action_signinFragment_to_dashboardFragment)
                     } catch (exp: Exception) {
                         Timber.e(exp)

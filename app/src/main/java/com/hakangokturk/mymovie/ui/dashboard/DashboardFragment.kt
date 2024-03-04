@@ -39,8 +39,6 @@ class DashboardFragment : BaseListFragment<FragmentDashboardBinding, NowPlaying.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -48,7 +46,6 @@ class DashboardFragment : BaseListFragment<FragmentDashboardBinding, NowPlaying.
             getUpcoming()
             getNowPlaying()
             getGenreList()
-
     }
 
     private fun getUpcoming() {
@@ -69,7 +66,6 @@ class DashboardFragment : BaseListFragment<FragmentDashboardBinding, NowPlaying.
             }
         }
     }
-
 
     private fun getNowPlaying() {
         lifecycleScope.launch {
@@ -119,14 +115,6 @@ class DashboardFragment : BaseListFragment<FragmentDashboardBinding, NowPlaying.
        binding?.recyclerNowPlayingParentId?.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
        binding?.recyclerNowPlayingParentId?.adapter = adapter
        adapter.notifyDataSetChanged()
-       adapterGenreList.clickListener = object : ClickListener {
-           override fun click(name: String, obj: Parcelable) {
-               Timber.i("FUCK $name")
-               val t = obj as MovieByGenre
-               Timber.i("FUCK $t")
-           }
-
-       }
    }
 
     private fun setupAdapterGenres(list: List<GenreList.Genre?>) {
@@ -135,6 +123,4 @@ class DashboardFragment : BaseListFragment<FragmentDashboardBinding, NowPlaying.
         binding?.recyclerGenreListId?.adapter = adapterGenreList
         adapterGenreList.notifyDataSetChanged()
     }
-
-
 }

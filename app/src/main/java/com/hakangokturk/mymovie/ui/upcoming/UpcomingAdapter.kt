@@ -10,23 +10,6 @@ import com.hakangokturk.mymovie.databinding.ItemUpcomingBinding
 import com.hakangokturk.mymovie.model.Detail
 import com.hakangokturk.mymovie.model.Upcoming
 
-/*
-@AndroidEntryPoint
-class UpcomingAdapter (items: List<Upcoming.Result?>): BaseAdapter<Upcoming.Result?>(R.layout.item_upcoming, items) {
-    override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
-        val upcoming = list[position]
-        holder.dataBinding. = upcoming
-
-        holder.dataBinding.root.setOnClickListener {
-            val bundle = bundleOf()
-            bundle.putParcelable("movieIdUpcoming", Detail(upcoming?.id!!, upcoming.releaseDate!!, upcoming.backdropPath!!, upcoming.title!!, upcoming.voteAverage!!, upcoming.overview!!))
-            Navigation.findNavController(it).navigate(R.id.action_upcomingFragment_to_detailChildFragment, bundle)
-        }
-    }
-}
-
- */
-
 class UpcomingAdapter(private var upcomingList: List<Upcoming.Result?>): RecyclerView.Adapter<UpcomingAdapter.UpcomingViewHolder>() {
     class UpcomingViewHolder(var dataBinding:ItemUpcomingBinding ): RecyclerView.ViewHolder(dataBinding.root) {
 

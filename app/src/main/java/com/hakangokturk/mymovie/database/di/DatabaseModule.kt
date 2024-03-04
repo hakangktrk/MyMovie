@@ -18,12 +18,9 @@ class DatabaseModule {
     @Singleton
     @Provides
     fun provideDatabase(@ApplicationContext app: Context): MyMovieDatabase {
-        //database i olusturmak icin application sinifi lazim
-        //Database agir bir sinif her seferinde yeniden olusturursa uygulamayi yavaslatir o yuzden bir kere olustursun diye singleton yaptik
         return Room.databaseBuilder(app, MyMovieDatabase::class.java, "mymovie.db")
             .fallbackToDestructiveMigration()
             .build()
-        //mymovie database in genel adi. table isimlerini entity ler ile verecegiz
     }
 
     @Singleton

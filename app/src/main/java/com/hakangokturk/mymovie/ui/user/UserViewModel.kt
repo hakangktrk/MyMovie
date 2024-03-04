@@ -79,23 +79,4 @@ class UserViewModel @Inject constructor(
         val user = userRepository.isUserExists(username, password)
         return user !=null
     }
-    /*
-      fun passwordContainerColorChange(): Int {
-          return if (validationPasswordResult.value.toString() == ValidationResult.VALID.toString()) {
-              R.color.lightgreen
-          } else {
-              R.color.red
-          }
-      }
-
-      object BindingAdapters{
-          @JvmStatic
-          @BindingAdapter("helperTextTextColor")
-          fun setHelperTextTextColor(textInputLayout: TextInputLayout, colorResource: Int) {
-              val colorStateList = ColorStateList.valueOf(ContextCompat.getColor(textInputLayout.context, colorResource))
-              textInputLayout.defaultHintTextColor = colorStateList
-          }
-      }
-
-       */
 }

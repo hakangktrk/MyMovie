@@ -7,7 +7,6 @@ import androidx.room.PrimaryKey
 @Entity(
     indices = [
         Index(value = ["username"], unique = true)
-        //uniq olmasini istedgimiz verilerde Index kullaniyoruz. username sutununa ayni deger kayit etmez.
     ]
 )
 

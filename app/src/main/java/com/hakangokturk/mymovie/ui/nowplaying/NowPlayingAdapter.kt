@@ -33,7 +33,6 @@ class NowPlayingAdapter(private var nowPlayingResultList: List<NowPlaying.Result
         holder.dataBinding.root.setOnClickListener {
            val bundle = bundleOf()
            bundle.putParcelable("movieIdNowPlaying", Detail(result?.id!!, result.releaseDate!!, result.backdropPath!!, result.title!!, result.voteAverage!!, result.overview!!))
-            // ??????????  burada !! yerine nasil kullanmam dogru olur
            Navigation.findNavController(it).navigate(R.id.action_nowPlayingFragment_to_detailChildFragment, bundle)
         }
     }

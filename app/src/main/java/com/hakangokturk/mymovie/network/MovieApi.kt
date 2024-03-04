@@ -17,7 +17,6 @@ interface MovieApi {
     @GET("3/discover/movie")
     suspend fun getMovie(): Movie
 
-
     @GET("3/discover/movie")
     suspend fun getMovieById(
         @Query("with_genres") id:String,
@@ -28,14 +27,6 @@ interface MovieApi {
 
     @GET("3/movie/now_playing")
     suspend fun  getNowPlaying(): NowPlaying
-
-    @GET("3/movie/now_playing")
-    suspend fun getNowPlayingById(
-        @Query("id") id: Int
-    ): NowPlaying
-
-    @GET("3/authentication/token/new")
-    suspend fun refreshToken(): RefreshToken
 
     @GET("3/movie/{movie_id}/credits")
     suspend fun getMovieCredits(@Path("movie_id") movieId: Int): MovieCredits
