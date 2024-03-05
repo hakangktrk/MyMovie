@@ -13,7 +13,7 @@ MyMovie is a TMDB mobile application. You can learn details like overview, cast 
 - Room Database
 - Glide
 - Retrofit
-- Gson
+- Json
 - ViewPager
 - TheMovieDb(Tmdb) API
 
