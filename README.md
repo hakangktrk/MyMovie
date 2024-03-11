@@ -6,6 +6,7 @@ MyMovie is a TMDB mobile application. You can learn details like overview, cast 
 ## Build With
 
 - MVVM with Clean Architecture
+- Kotlin
 - Coroutines & Flow
 - Hilt for Dependency Injection
 - Navigation Component
