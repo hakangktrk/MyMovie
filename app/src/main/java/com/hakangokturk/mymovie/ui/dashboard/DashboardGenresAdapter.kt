@@ -11,6 +11,7 @@ import com.hakangokturk.mymovie.databinding.ItemDashboardGenresBinding
 import com.hakangokturk.mymovie.model.GenreList
 import kotlinx.parcelize.Parcelize
 
+
 class DashboardGenreListAdapter(private var genreList: List<GenreList.Genre?>): RecyclerView.Adapter<DashboardGenreListAdapter.DashboardGenresHolder> () {
     class DashboardGenresHolder(var dataBinding: ItemDashboardGenresBinding): RecyclerView.ViewHolder(dataBinding.root) {
 
